@@ -8,4 +8,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\server\AplicacaoPOO.Dominio\AplicacaoPOO.Dominio.csproj" />
+  </ItemGroup>
+
 </Project>

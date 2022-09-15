@@ -10,5 +10,17 @@ namespace AplicacaoPOO.Dominio
     {
         Pagamento Pagamento { get; set; }
         double Desconto { get; set; }
-    }
+
+        public double DebitarValor(double saldo, double desconto)
+        {
+            var resultado = saldo - desconto;
+            return resultado;
+
+        }
+
+            
+            
+            
+    } 
+
 }

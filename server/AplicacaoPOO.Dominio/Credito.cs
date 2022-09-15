@@ -11,5 +11,15 @@ namespace AplicacaoPOO.Dominio
         Pagamento Pagamento { get; set; }   
         int Parcelas { get; set; }
         float Juros { get; set; }
+
+        public double CreditarValor (double saldo, double credito)
+        {
+            var resultado = saldo * credito;
+            return resultado;
+
+        }
+
+
+
     }
 }

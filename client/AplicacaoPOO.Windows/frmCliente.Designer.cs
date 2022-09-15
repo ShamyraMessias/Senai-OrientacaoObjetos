@@ -28,97 +28,154 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.txtCredito = new System.Windows.Forms.TextBox();
+            this.txtCPF = new System.Windows.Forms.TextBox();
+            this.txtDebito = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.Nome = new System.Windows.Forms.Label();
+            this.lblCPF = new System.Windows.Forms.Label();
+            this.lblDebito = new System.Windows.Forms.Label();
+            this.lblCredito = new System.Windows.Forms.Label();
+            this.btnCalcular = new System.Windows.Forms.Button();
+            this.lblSaldoInicial = new System.Windows.Forms.Label();
+            this.lblSaldo = new System.Windows.Forms.Label();
+            this.lblSaldoValor = new System.Windows.Forms.Label();
+            this.lblSaldoInicialValor = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtCredito
             // 
-            this.textBox1.Location = new System.Drawing.Point(94, 121);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 0;
+            this.txtCredito.Location = new System.Drawing.Point(311, 63);
+            this.txtCredito.Name = "txtCredito";
+            this.txtCredito.Size = new System.Drawing.Size(100, 23);
+            this.txtCredito.TabIndex = 0;
             // 
-            // textBox2
+            // txtCPF
             // 
-            this.textBox2.Location = new System.Drawing.Point(58, 47);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(136, 23);
-            this.textBox2.TabIndex = 1;
+            this.txtCPF.Location = new System.Drawing.Point(262, 12);
+            this.txtCPF.Name = "txtCPF";
+            this.txtCPF.Size = new System.Drawing.Size(149, 23);
+            this.txtCPF.TabIndex = 1;
             // 
-            // textBox3
+            // txtDebito
             // 
-            this.textBox3.Location = new System.Drawing.Point(94, 84);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 23);
-            this.textBox3.TabIndex = 2;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txtDebito.Location = new System.Drawing.Point(99, 60);
+            this.txtDebito.Name = "txtDebito";
+            this.txtDebito.Size = new System.Drawing.Size(100, 23);
+            this.txtDebito.TabIndex = 2;
             // 
-            // textBox4
+            // txtNome
             // 
-            this.textBox4.Location = new System.Drawing.Point(58, 12);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(136, 23);
-            this.textBox4.TabIndex = 3;
+            this.txtNome.Location = new System.Drawing.Point(45, 12);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(149, 23);
+            this.txtNome.TabIndex = 3;
             // 
-            // label1
+            // Nome
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 15);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Nome";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.Nome.AutoSize = true;
+            this.Nome.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Nome.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Nome.Location = new System.Drawing.Point(2, 12);
+            this.Nome.Name = "Nome";
+            this.Nome.Size = new System.Drawing.Size(41, 15);
+            this.Nome.TabIndex = 4;
+            this.Nome.Text = "Nome";
             // 
-            // label2
+            // lblCPF
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 50);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 15);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "CPF";
+            this.lblCPF.AutoSize = true;
+            this.lblCPF.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCPF.Location = new System.Drawing.Point(219, 15);
+            this.lblCPF.Name = "lblCPF";
+            this.lblCPF.Size = new System.Drawing.Size(27, 15);
+            this.lblCPF.TabIndex = 5;
+            this.lblCPF.Text = "CPF";
             // 
-            // label3
+            // lblDebito
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(2, 87);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 15);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Valor de debito";
+            this.lblDebito.AutoSize = true;
+            this.lblDebito.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblDebito.Location = new System.Drawing.Point(2, 63);
+            this.lblDebito.Name = "lblDebito";
+            this.lblDebito.Size = new System.Drawing.Size(91, 15);
+            this.lblDebito.TabIndex = 6;
+            this.lblDebito.Text = "Valor de debito";
             // 
-            // label4
+            // lblCredito
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(-7, 124);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 15);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Valor de credito";
+            this.lblCredito.AutoSize = true;
+            this.lblCredito.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCredito.Location = new System.Drawing.Point(210, 66);
+            this.lblCredito.Name = "lblCredito";
+            this.lblCredito.Size = new System.Drawing.Size(95, 15);
+            this.lblCredito.TabIndex = 7;
+            this.lblCredito.Text = "Valor de credito";
+            // 
+            // btnCalcular
+            // 
+            this.btnCalcular.Location = new System.Drawing.Point(129, 108);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(133, 40);
+            this.btnCalcular.TabIndex = 8;
+            this.btnCalcular.Text = " Calcular";
+            this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
+            // 
+            // lblSaldoInicial
+            // 
+            this.lblSaldoInicial.AutoSize = true;
+            this.lblSaldoInicial.Location = new System.Drawing.Point(468, 20);
+            this.lblSaldoInicial.Name = "lblSaldoInicial";
+            this.lblSaldoInicial.Size = new System.Drawing.Size(84, 15);
+            this.lblSaldoInicial.TabIndex = 9;
+            this.lblSaldoInicial.Text = "SALDO INCIAL";
+            // 
+            // lblSaldo
+            // 
+            this.lblSaldo.AutoSize = true;
+            this.lblSaldo.Location = new System.Drawing.Point(487, 89);
+            this.lblSaldo.Name = "lblSaldo";
+            this.lblSaldo.Size = new System.Drawing.Size(44, 15);
+            this.lblSaldo.TabIndex = 10;
+            this.lblSaldo.Text = "SALDO";
+            // 
+            // lblSaldoValor
+            // 
+            this.lblSaldoValor.AutoSize = true;
+            this.lblSaldoValor.Location = new System.Drawing.Point(502, 133);
+            this.lblSaldoValor.Name = "lblSaldoValor";
+            this.lblSaldoValor.Size = new System.Drawing.Size(13, 15);
+            this.lblSaldoValor.TabIndex = 11;
+            this.lblSaldoValor.Text = "0";
+            // 
+            // lblSaldoInicialValor
+            // 
+            this.lblSaldoInicialValor.AutoSize = true;
+            this.lblSaldoInicialValor.Location = new System.Drawing.Point(502, 50);
+            this.lblSaldoInicialValor.Name = "lblSaldoInicialValor";
+            this.lblSaldoInicialValor.Size = new System.Drawing.Size(13, 15);
+            this.lblSaldoInicialValor.TabIndex = 12;
+            this.lblSaldoInicialValor.Text = "0";
             // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 298);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(880, 208);
+            this.Controls.Add(this.lblSaldoInicialValor);
+            this.Controls.Add(this.lblSaldoValor);
+            this.Controls.Add(this.lblSaldo);
+            this.Controls.Add(this.lblSaldoInicial);
+            this.Controls.Add(this.btnCalcular);
+            this.Controls.Add(this.lblCredito);
+            this.Controls.Add(this.lblDebito);
+            this.Controls.Add(this.lblCPF);
+            this.Controls.Add(this.Nome);
+            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.txtDebito);
+            this.Controls.Add(this.txtCPF);
+            this.Controls.Add(this.txtCredito);
             this.Name = "frmCliente";
             this.Text = "frmCliente";
             this.ResumeLayout(false);
@@ -128,13 +185,18 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
+        private TextBox txtCredito;
+        private TextBox txtCPF;
+        private TextBox txtDebito;
+        private TextBox txtNome;
+        private Label Nome;
+        private Label lblCPF;
+        private Label lblDebito;
+        private Label lblCredito;
+        private Button btnCalcular;
+        private Label lblSaldoInicial;
+        private Label lblSaldo;
+        private Label lblSaldoValor;
+        private Label lblSaldoInicialValor;
     }
 }
