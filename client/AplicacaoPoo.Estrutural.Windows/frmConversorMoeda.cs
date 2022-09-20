@@ -12,6 +12,9 @@ namespace AplicacaoPoo.Estrutural.Windows
 {
     public partial class frmConversorMoeda : Form
     {
+        private bool CotacaoEhValido;
+        private bool ValorEmDolarEhValido;
+
         public frmConversorMoeda()
         {
             InitializeComponent();
@@ -34,12 +37,24 @@ namespace AplicacaoPoo.Estrutural.Windows
             try
             {
                 var resultado = decimal.Parse(txtCotacaoDolar.Text);
+                CotacaoEhValido=true;
+                if (ValorEmDolarEhValido && CotacaoEhValido)
+                {
+                    btnConverterEmReal.Enabled = true;
+                }
+                else
+                {
+                    btnConverterEmReal.Enabled=false;
+                }
             }
             catch (Exception)
             {
                 MessageBox.Show("A cotação do dalor é um valor decimal");
                 txtCotacaoDolar.Focus();
-                throw;
+                ValorEmDolarEhValido = false;
+                btnConverterEmReal.Enabled = false;
+
+
             }
         }
 
@@ -47,13 +62,21 @@ namespace AplicacaoPoo.Estrutural.Windows
         {
             try
             {
-                var resultado = decimal.Parse(txtValorEmDolar.Text);
+                var resultado = decimal.Parse(txtCotacaoDolar.Text);
+                ValorEmDolarEhValido = true;
+                if (ValorEmDolarEhValido && CotacaoEhValido)
+                {
+                    btnConverterEmReal.Enabled = true;
+                } 
+                
             }
             catch (Exception)
             {
                 MessageBox.Show("A cotação do dalor é um valor decimal");
                 txtValorEmDolar.Focus();
-                throw;
+                ValorEmDolarEhValido=false;
+                btnConverterEmReal.Enabled = false;
+
             }
         }
     }
