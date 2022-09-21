@@ -18,7 +18,7 @@ namespace AplicacaoPoo.Estrutural.Windows
         public frmConversorMoeda()
         {
             InitializeComponent();
-            btnConverterEmReal.Enabled = false;
+            HabilitarOuDesabilitarBotaoCalcularConversao();
         }
 
         private void btnConverterEmReal_Click(object sender, EventArgs e)
@@ -38,46 +38,45 @@ namespace AplicacaoPoo.Estrutural.Windows
             {
                 var resultado = decimal.Parse(txtCotacaoDolar.Text);
                 CotacaoEhValido=true;
-                if (ValorEmDolarEhValido && CotacaoEhValido)
-                {
-                    btnConverterEmReal.Enabled = true;
-                }
-                else
-                {
-                    btnConverterEmReal.Enabled=false;
-                }
+                HabilitarOuDesabilitarBotaoCalcularConversao();
             }
             catch (Exception)
             {
                 MessageBox.Show("A cotação do dalor é um valor decimal");
                 txtCotacaoDolar.Focus();
-                ValorEmDolarEhValido = false;
-                btnConverterEmReal.Enabled = false;
-
+                HabilitarOuDesabilitarBotaoCalcularConversao();
 
             }
         }
-
         private void txtValorEmDolar_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                var resultado = decimal.Parse(txtCotacaoDolar.Text);
+                var resultado = decimal.Parse(txtValorEmDolar.Text);
                 ValorEmDolarEhValido = true;
-                if (ValorEmDolarEhValido && CotacaoEhValido)
-                {
-                    btnConverterEmReal.Enabled = true;
-                } 
-                
+                HabilitarOuDesabilitarBotaoCalcularConversao();
             }
             catch (Exception)
             {
                 MessageBox.Show("A cotação do dalor é um valor decimal");
                 txtValorEmDolar.Focus();
-                ValorEmDolarEhValido=false;
-                btnConverterEmReal.Enabled = false;
+                ValorEmDolarEhValido = false;
+                HabilitarOuDesabilitarBotaoCalcularConversao();
 
             }
+        }
+
+        private void HabilitarOuDesabilitarBotaoCalcularConversao ()
+        {
+            if (ValorEmDolarEhValido && CotacaoEhValido)
+            {
+                btnConverterEmReal.Enabled = true;
+            }
+            else
+            { 
+                btnConverterEmReal.Enabled = false;
+            }
+
         }
     }
 }
