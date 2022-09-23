@@ -1,4 +1,5 @@
-﻿using AplicacaoPoo.Dominio.services;
+﻿using AplicacaoPoo.Dominio.Helpers;
+using AplicacaoPoo.Dominio.services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,24 +14,16 @@ namespace AplicacaoPoo.Estrutural.Windows
 {
     public partial class frmConversorMoeda : Form
     {
-       
+
         public frmConversorMoeda()
         {
             InitializeComponent();
-            btnConverterEmReal.Enabled = false; 
-        
-        }
+            btnConverterEmReal.Enabled = false;
+            lblPrimeiroValor.Text = $"1 {MoedaHelper.Dolar} igual a";
+            lblSegundoValor.Text = $"5,12 {MoedaHelper.Real}";
 
-        private void btnConverterEmReal_Click(object sender, EventArgs e)
-        {
-            var valorEmDolar = decimal.Parse(txtValorEmDolar.Text);
 
-            var moeda = new ConverterMoedaServices();
-            var resultado = moeda.ConverterDolarEmReal(valorEmDolar);
-
-            //string interpolation
-            MessageBox.Show($"Valor convertido é: {resultado} em reias");
-        }
+        }                      
 
 
         private void txtValorEmDolar_TextChanged(object sender, EventArgs e)
@@ -38,15 +31,17 @@ namespace AplicacaoPoo.Estrutural.Windows
            
              try
               {
-                 if (txtValorEmDolar.Text == "" ) 
-                   {
-                        btnConverterEmReal.Enabled = false;
-                        return;
-                   }
-                 var resultado = decimal.Parse(txtValorEmDolar.Text);
-                 btnConverterEmReal.Enabled=true;
+                if (txtValorEmDolar.Text == "") return;
+                 
+                var valorEmDolar = decimal.Parse(txtValorEmDolar.Text);
 
-                }
+                var moeda = new ConverterMoedaServices();
+                var resultado = moeda.ConverterDolarEmReal(valorEmDolar);
+                lblPrimeiroValor.Text = $"{valorEmDolar} {MoedaHelper.Dolar} igual a";
+                lblSegundoValor.Text = $"{resultado} {MoedaHelper.Real}";
+
+
+            }
                 catch (Exception)
                 {
                     MessageBox.Show("A cotação do dalor é um valor decimal");
@@ -57,6 +52,9 @@ namespace AplicacaoPoo.Estrutural.Windows
             
         }
 
-             
+        private void comboBox1_BackColorChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
