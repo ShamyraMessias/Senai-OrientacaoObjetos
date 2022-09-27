@@ -32,7 +32,7 @@
             this.btnConverterEmReal = new System.Windows.Forms.Button();
             this.lblPrimeiroValor = new System.Windows.Forms.Label();
             this.lblSegundoValor = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbMoedas = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtValorEmDolar
@@ -80,16 +80,16 @@
             this.lblSegundoValor.Size = new System.Drawing.Size(0, 30);
             this.lblSegundoValor.TabIndex = 4;
             // 
-            // comboBox1
+            // cmbMoedas
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(259, 107);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(105, 23);
-            this.comboBox1.TabIndex = 5;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.txtValorEmDolar_TextChanged);
-            this.comboBox1.BackColorChanged += new System.EventHandler(this.comboBox1_BackColorChanged);
+            this.cmbMoedas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cmbMoedas.FormattingEnabled = true;
+            this.cmbMoedas.Location = new System.Drawing.Point(259, 107);
+            this.cmbMoedas.Name = "cmbMoedas";
+            this.cmbMoedas.Size = new System.Drawing.Size(105, 23);
+            this.cmbMoedas.TabIndex = 5;
+            this.cmbMoedas.SelectedIndexChanged += new System.EventHandler(this.cmbMoedas_SelectedIndexChanged);
+
             // 
             // frmConversorMoeda
             // 
@@ -97,7 +97,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(392, 205);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbMoedas);
             this.Controls.Add(this.lblSegundoValor);
             this.Controls.Add(this.lblPrimeiroValor);
             this.Controls.Add(this.btnConverterEmReal);
@@ -114,6 +114,6 @@
         private Button btnConverterEmReal;
         private Label lblPrimeiroValor;
         private Label lblSegundoValor;
-        private ComboBox comboBox1;
+        private ComboBox cmbMoedas;
     }
 }
