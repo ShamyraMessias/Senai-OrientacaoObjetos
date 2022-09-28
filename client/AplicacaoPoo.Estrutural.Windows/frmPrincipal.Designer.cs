@@ -28,46 +28,86 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAbrirFormConversorMoedas = new System.Windows.Forms.Button();
-            this.btnAbrirFormComissionamento = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.conversorDeModasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comissionamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.funcionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.funcionáriosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnAbrirFormConversorMoedas
+            // menuStrip1
             // 
-            this.btnAbrirFormConversorMoedas.Location = new System.Drawing.Point(12, 41);
-            this.btnAbrirFormConversorMoedas.Name = "btnAbrirFormConversorMoedas";
-            this.btnAbrirFormConversorMoedas.Size = new System.Drawing.Size(158, 64);
-            this.btnAbrirFormConversorMoedas.TabIndex = 0;
-            this.btnAbrirFormConversorMoedas.Text = "CONVERSOR DE MOEDAS";
-            this.btnAbrirFormConversorMoedas.UseVisualStyleBackColor = true;
-            this.btnAbrirFormConversorMoedas.Click += new System.EventHandler(this.btnAbrirFormConversorMoedas_Click);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.conversorDeModasToolStripMenuItem,
+            this.comissionamentoToolStripMenuItem,
+            this.cadastrosToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(387, 24);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // btnAbrirFormComissionamento
+            // conversorDeModasToolStripMenuItem
             // 
-            this.btnAbrirFormComissionamento.Location = new System.Drawing.Point(195, 41);
-            this.btnAbrirFormComissionamento.Name = "btnAbrirFormComissionamento";
-            this.btnAbrirFormComissionamento.Size = new System.Drawing.Size(149, 64);
-            this.btnAbrirFormComissionamento.TabIndex = 1;
-            this.btnAbrirFormComissionamento.Text = "COMISSIONAMENTO";
-            this.btnAbrirFormComissionamento.UseVisualStyleBackColor = true;
-            this.btnAbrirFormComissionamento.Click += new System.EventHandler(this.btnAbrirFormComissionamento_Click);
+            this.conversorDeModasToolStripMenuItem.Name = "conversorDeModasToolStripMenuItem";
+            this.conversorDeModasToolStripMenuItem.Size = new System.Drawing.Size(131, 20);
+            this.conversorDeModasToolStripMenuItem.Text = "Conversor de Modas ";
+            this.conversorDeModasToolStripMenuItem.Click += new System.EventHandler(this.conversorDeModasToolStripMenuItem_Click);
+            // 
+            // comissionamentoToolStripMenuItem
+            // 
+            this.comissionamentoToolStripMenuItem.Name = "comissionamentoToolStripMenuItem";
+            this.comissionamentoToolStripMenuItem.Size = new System.Drawing.Size(116, 20);
+            this.comissionamentoToolStripMenuItem.Text = "Comissionamento";
+            this.comissionamentoToolStripMenuItem.Click += new System.EventHandler(this.comissionamentoToolStripMenuItem_Click);
+            // 
+            // cadastrosToolStripMenuItem
+            // 
+            this.cadastrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.funcionáriosToolStripMenuItem,
+            this.funcionáriosToolStripMenuItem1});
+            this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
+            this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.cadastrosToolStripMenuItem.Text = "Cadastros";
+            // 
+            // funcionáriosToolStripMenuItem
+            // 
+            this.funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
+            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.funcionáriosToolStripMenuItem.Text = "Clientes";
+            // 
+            // funcionáriosToolStripMenuItem1
+            // 
+            this.funcionáriosToolStripMenuItem1.Name = "funcionáriosToolStripMenuItem1";
+            this.funcionáriosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.funcionáriosToolStripMenuItem1.Text = "Funcionários";
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(368, 161);
-            this.Controls.Add(this.btnAbrirFormComissionamento);
-            this.Controls.Add(this.btnAbrirFormConversorMoedas);
+            this.ClientSize = new System.Drawing.Size(387, 175);
+            this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmPrincipal";
             this.Text = "frmPrincipal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private Button btnAbrirFormConversorMoedas;
-        private Button btnAbrirFormComissionamento;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem conversorDeModasToolStripMenuItem;
+        private ToolStripMenuItem comissionamentoToolStripMenuItem;
+        private ToolStripMenuItem cadastrosToolStripMenuItem;
+        private ToolStripMenuItem funcionáriosToolStripMenuItem;
+        private ToolStripMenuItem funcionáriosToolStripMenuItem1;
     }
 }

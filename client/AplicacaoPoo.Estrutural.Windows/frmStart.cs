@@ -1,7 +1,7 @@
 ﻿namespace AplicacaoPoo.Estrutural.Windows
 {
     public partial class frmStart : Form
-    {
+    { 
         public frmStart()
         {
             InitializeComponent();
