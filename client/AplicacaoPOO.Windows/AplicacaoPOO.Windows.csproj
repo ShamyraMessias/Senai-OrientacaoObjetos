@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\server\AplicacaoPoo.Dominio\AplicacaoPoo.Dominio.csproj" />
+    <ProjectReference Include="..\AplicacaoPoo.Estrutural.Windows\AplicacaoPoo.Estrutural.Windows.csproj" />
   </ItemGroup>
 
 </Project>
