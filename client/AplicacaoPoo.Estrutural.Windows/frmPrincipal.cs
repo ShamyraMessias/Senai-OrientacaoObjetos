@@ -23,10 +23,19 @@ namespace AplicacaoPoo.Estrutural.Windows
             form.Show();
         }
 
-        private void btnAbrirFormComissionamento_Click(object sender, EventArgs e)
+        
+        private void conversorDeModasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new frmConversorMoeda();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void comissionamentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = new frmComissionamento();
-            form.Show();
+            form.MdiParent = this;
+            form.Show();    
         }
     }
 }
