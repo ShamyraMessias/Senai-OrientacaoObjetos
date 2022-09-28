@@ -1,6 +1,4 @@
-using AplicacaoPoo.Estrutural.Windows;
-
-namespace AplicacaoPoo.Windows
+namespace AplicacaoPoo.Estrutural.Windows
 {
     internal static class Program
     {

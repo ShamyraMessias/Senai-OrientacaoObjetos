@@ -4,12 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AplicacaoPOO.Dominio
+namespace AplicacaoPoo.Dominio
 {
     public class Credito
     {
-        Pagamento Pagamento { get; set; }   
+        Pagamento Pagamento { get; set; }
         int Parcelas { get; set; }
         float Juros { get; set; }
+
+        public double CreditarValor(double saldo, double credito)
+        {
+            var resultado = saldo + credito;
+            return resultado;
+
+        }
     }
 }

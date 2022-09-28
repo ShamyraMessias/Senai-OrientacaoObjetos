@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AplicacaoPOO.Dominio
+namespace AplicacaoPoo.Dominio
 {
     public class Pagamento
     {
