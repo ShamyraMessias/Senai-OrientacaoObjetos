@@ -16,5 +16,10 @@ namespace AplicacaoPoo.Estrutural.Windows
         {
             InitializeComponent();
         }
+
+        private void txtCodigoDaPeca_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
